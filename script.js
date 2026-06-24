@@ -11,7 +11,6 @@ window.onload = showDate;
 //Review button function
 
 function reviewForm() {
-
     document.getElementById("reviewSection").innerHTML =
         "<h2>PLEASE REVIEW THIS INFORMATION</h2>";
 }
