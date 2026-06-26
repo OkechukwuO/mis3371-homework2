@@ -29,5 +29,9 @@ function reviewForm() {
 
         "<p>Date of Birth: " + dob + "</p>" +
         "<p>Email: " + email + "</p>" +
-        "<p>Phone Number: " + phone + "</p>";
+        "<p>Phone Number: " + phone + "</p>" +
+        "<p>Address: " + address + "</p>" +
+        "<p>City: " + city + "</p>" +
+        "<p>State: " + state + "</p>" +
+        "<p>Zip Code: " + zip + "</p>";
 }
