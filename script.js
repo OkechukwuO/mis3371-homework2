@@ -27,7 +27,7 @@ function reviewForm() {
         lastName +
         "</p>" +
 
-        "<p>Date of Birth: " + dob + "</p>"
+        "<p>Date of Birth: " + dob + "</p>" +
         "<p>Email: " + email + "</p>" +
         "<p>Phone Number: " + phone + "</p>";
 }
