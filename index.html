@@ -71,7 +71,7 @@ Description: Patient registration form for Hummingbird Medical.
 
     <tr>
         <td colspan="3">
-            <input type="text" maxlength="60" placeholder="Street Address">
+            <input type="text" id="address" maxlength="60" placeholder="Street Address">
         </td>
     </tr>
 <!---City, State, Zip--->
@@ -83,7 +83,7 @@ Description: Patient registration form for Hummingbird Medical.
 
     <tr>
         <td>
-            <input type="text" maxlength="30">
+            <input type="text" id="city" maxlength="30">
         </td>
 
 <td>
@@ -141,11 +141,11 @@ Description: Patient registration form for Hummingbird Medical.
         <option value="WY">Wyoming</option>
         <option value="DC">District of Columbia</option>
         <option value="PR">Puerto Rico</option>
-    </select>
+    </select id="state">
 </td>
 
         <td>
-            <input type="text" maxlength="10">
+            <input type="text" id="zip" maxlength="10">
         </td>
     </tr>
 <!---Date of Birth, Social Security Number--->
