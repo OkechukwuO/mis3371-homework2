@@ -13,8 +13,14 @@ window.onload = showDate;
 function reviewForm() {
 
     var firstName = document.getElementById("fname").value;
+    var middleInitial = document.getElementById("mi").value;
+    var lastName = document.getElementById("lname").value;
     
     document.getElementById("reviewSection").innerHTML =
         "<h2>PLEASE REVIEW THIS INFORMATION</h2>" +
-        "<p>First Name: " + firstName + "</p>";
+        "<p>Name: " +
+        firstName + " " +
+        middleInitial + " " +
+        lastName +
+        "</p>";
 }
