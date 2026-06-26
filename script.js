@@ -15,6 +15,7 @@ function reviewForm() {
     var firstName = document.getElementById("fname").value;
     var middleInitial = document.getElementById("mi").value;
     var lastName = document.getElementById("lname").value;
+    var dob = document.getElementById("dob").value;
     
     document.getElementById("reviewSection").innerHTML =
         "<h2>PLEASE REVIEW THIS INFORMATION</h2>" +
@@ -22,5 +23,7 @@ function reviewForm() {
         firstName + " " +
         middleInitial + " " +
         lastName +
-        "</p>";
+        "</p>" +
+
+        "<p>Date of Birth: " + dob + "</p>";
 }
