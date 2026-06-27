@@ -257,7 +257,7 @@ Description: Patient registration form for Hummingbird Medical.
 
 <tr>
     <td colspan="3">
-        <input type="range" min="1" max="10" value="5" oninput="updateSlider()"><span id="sliderValue">5</span>
+        <input type="range" id="health" min="1" max="10" value="5" oninput="updateSlider()"><span id="sliderValue">5</span>
     </td>
 </tr>
 
@@ -304,13 +304,14 @@ Description: Patient registration form for Hummingbird Medical.
 
         <input type="button" value="REVIEW" onclick="reviewForm()">
 
-        <input type="submit" value="SUBMIT">
+        <input type="button" value="SUBMIT">
 
-        <div id="reviewSection"></div>
 
     </td>
 </tr>
 </table>
+
+<div id="reviewSection"></div>
     
 </form>
 <!---footer section--->
