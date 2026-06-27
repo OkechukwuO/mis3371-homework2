@@ -16,6 +16,7 @@ function reviewForm() {
     var middleInitial = document.getElementById("mi").value;
     var lastName = document.getElementById("lname").value;
     var dob = document.getElementById("dob").value;
+    var ssn = document.getElementById("ssn").value;
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
     var address = document.getElementById("address").value;
@@ -32,6 +33,7 @@ function reviewForm() {
         "</p>" +
 
         "<p>Date of Birth: " + dob + "</p>" +
+        "<p>Social Security Number: " + ssn + "</p>" +
         "<p>Email: " + email + "</p>" +
         "<p>Phone Number: " + phone + "</p>" +
         "<p>Address: " + address + "</p>" +
