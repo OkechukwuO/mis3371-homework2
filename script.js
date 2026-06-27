@@ -7,6 +7,11 @@ function showDate() {
 
 window.onload = showDate;
 
+// Slider function
+function updateSlider() {
+    document.getElementById("sliderValue").innerHTML =
+        document.getElementById("health").value;
+}
 
 //Review button function
 
