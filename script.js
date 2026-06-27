@@ -60,7 +60,42 @@ function reviewForm() {
 
     var health = document.getElementById("health").value;
 
+    var passwordError = "";
+
+    // length check
+    if (password1.length < 8 || password1.length > 30) {
+        passwordError = "Password must be 8–30 characters.";
+    }
     
+    // uppercase check
+    else if (!/[A-Z]/.test(password1)) {
+        passwordError = "Password must contain 1 uppercase letter.";
+    }
+    
+    // lowercase check
+    else if (!/[a-z]/.test(password1)) {
+        passwordError = "Password must contain 1 lowercase letter.";
+    }
+    
+    // number check
+    else if (!/[0-9]/.test(password1)) {
+        passwordError = "Password must contain 1 number.";
+    }
+    
+    // special character check
+    else if (!/[!@#%^&*()_\-+=<>.,]/.test(password1)) {
+        passwordError = "Password must contain 1 special character.";
+    }
+    
+    // cannot match user ID
+    else if (password1.toLowerCase() === userId.toLowerCase()) {
+        passwordError = "Password cannot match User ID.";
+    }
+    
+    // must match each other
+    else if (password1 !== password2) {
+        passwordError = "Passwords do not match.";
+    }
 
     
     document.getElementById("reviewSection").innerHTML =
@@ -96,5 +131,5 @@ function reviewForm() {
         "<p>Health Rating: " + health + "</p>" +
 
         "<p>User ID: " + userId + "</p>" +
-        "<p>Password Match: " + (password1 === password2 ? "YES" : "NO") + "</p>";
+        "<p>Password Status: " + (passwordError === "" ? "PASS" : passwordError) + "</p>";
 }
