@@ -43,15 +43,15 @@ Description: Patient registration form for Hummingbird Medical.
     <!-- PATIENT NAME INPUTS -->
     <tr>
         <td>
-            <input type="text" id="fname" maxlength="30" placeholder="First Name">
+            <input type="text" id="fname" maxlength="30" placeholder="First Name" title="Letters, apostrophes, and dashes only" pattern="[A-Za-z'-]{1,30}">
         </td>
 
         <td>
-            <input type="text" id="mi" maxlength="1" placeholder="MI">
+            <input type="text" id="mi" maxlength="1" placeholder="MI" title="One letter only" pattern="[A-Za-z]">
         </td>
 
         <td>
-            <input type="text" id="lname" maxlength="30" placeholder="Last Name">
+            <input type="text" id="lname" maxlength="30" placeholder="Last Name" title="Letters, apostrophes, numbers 2-5, dashes allowed" pattern="[A-Za-z0-9'-]{1,30}">
         </td>
     </tr>
 <!---Phone number--->
@@ -61,7 +61,7 @@ Description: Patient registration form for Hummingbird Medical.
 
     <tr>
         <td colspan="3">
-            <input type="text" id="phone" maxlength="15" placeholder="(###) ###-####">
+            <input type="text" id="phone" maxlength="15" placeholder="(###) ###-####" title="Format: 000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
         </td>
     </tr>
 <!---Address--->
@@ -71,9 +71,19 @@ Description: Patient registration form for Hummingbird Medical.
 
     <tr>
         <td colspan="3">
-            <input type="text" id="address" maxlength="60" placeholder="Street Address">
+            <input type="text" id="address" maxlength="60" placeholder="Street Address" title="2 to 30 characters required" pattern=".{2,30}">
         </td>
     </tr>
+<!---Address Line 2--->
+    <tr>
+    <td colspan="3">Address Line 2 (Optional):</td>
+</tr>
+
+<tr>
+    <td colspan="3">
+        <input type="text" id="address2" maxlength="60" placeholder="Apt / Suite (optional)" title="Optional - 2 to 30 characters if used" pattern=".{0,30}">
+    </td>
+</tr>
 <!---City, State, Zip--->
 <tr>
         <td>City:</td>
@@ -83,7 +93,7 @@ Description: Patient registration form for Hummingbird Medical.
 
     <tr>
         <td>
-            <input type="text" id="city" maxlength="30">
+            <input type="text" id="city" maxlength="30" title="2 to 30 characters required" pattern=".{2,30}">
         </td>
 
 <td>
@@ -145,7 +155,7 @@ Description: Patient registration form for Hummingbird Medical.
 </td>
 
         <td>
-            <input type="text" id="zip" maxlength="10">
+            <input type="text" id="zip" maxlength="10" placeholder="77002 or 77002-1234" title="5 digit or ZIP+4 format" pattern="[0-9]{5}(-[0-9]{4})?">
         </td>
     </tr>
 <!---Date of Birth, Social Security Number--->
@@ -156,11 +166,11 @@ Description: Patient registration form for Hummingbird Medical.
 
     <tr>
         <td>
-            <input type="text" id="dob" placeholder="MM/DD/YYYY" maxlength="10">
+            <input type="text" id="dob" maxlength="10" placeholder="MM/DD/YYYY" title="Format MM/DD/YYYY" pattern="\d{2}/\d{2}/\d{4}">
         </td>
 
         <td colspan="2">
-            <input type="password" id="ssn" maxlength="11">
+            <input type="password" id="ssn" maxlength="11" title="Enter SSN (###-##-####)">
         </td>
     </tr>
 <!---Email Address--->
@@ -170,7 +180,7 @@ Description: Patient registration form for Hummingbird Medical.
 
     <tr>
         <td colspan="3">
-            <input type="email" id="email" maxlength="50" placeholder="name@example.com">
+            <input type="email" id="email" maxlength="50" placeholder="name@example.com" title="Enter a valid email address like name@domain.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
         </td>
     </tr>
 <!---Current Symptoms--->
@@ -190,14 +200,14 @@ Description: Patient registration form for Hummingbird Medical.
     </tr>
 
     <tr>
-        <td><input type="checkbox"> Fever</td>
-        <td><input type="checkbox"> Headache</td>
-        <td><input type="checkbox"> Cough</td>
+        <td><input type="checkbox" id="fever"> Fever</td>
+        <td><input type="checkbox" id="headache"> Headache</td>
+        <td><input type="checkbox" id="cough"> Cough</td>
     </tr>
 
     <tr>
-        <td><input type="checkbox"> Fatigue</td>
-        <td><input type="checkbox"> Nausea</td>
+        <td><input type="checkbox" id="fatigue"> Fatigue</td>
+        <td><input type="checkbox" id="nausea"> Nausea</td>
         <td></td>
     </tr>
 <!---Gender--->
@@ -247,7 +257,7 @@ Description: Patient registration form for Hummingbird Medical.
 
 <tr>
     <td colspan="3">
-        <input type="range" min="1" max="10" value="5">
+        <input type="range" min="1" max="10" value="5" oninput="updateSlider()"><span id="sliderValue">5</span>
     </td>
 </tr>
 
