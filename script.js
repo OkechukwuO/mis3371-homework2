@@ -18,6 +18,10 @@ function reviewForm() {
     var dob = document.getElementById("dob").value;
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
+    var address = document.getElementById("address").value;
+    var city = document.getElementById("city").value;
+    var state = document.getElementById("state").value;
+    var zip = document.getElementById("zip").value;
     
     document.getElementById("reviewSection").innerHTML =
         "<h2>PLEASE REVIEW THIS INFORMATION</h2>" +
